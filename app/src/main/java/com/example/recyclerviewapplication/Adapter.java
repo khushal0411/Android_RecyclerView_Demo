@@ -1,5 +1,6 @@
 package com.example.recyclerviewapplication;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,6 +50,44 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), "You Have clicked "+dataItems.getDesc(),Toast.LENGTH_SHORT).show();
+                String title= dataItems.getDesc();
+                if(title=="C"){
+                    Intent intent=new Intent(v.getContext(),TestActivity.class);
+                    intent.putExtra("titile","Welcome To C language");
+                    v.getContext().startActivity(intent);
+                }
+                if(title=="C++"){
+
+                    Intent intent=new Intent(v.getContext(),TestActivity.class);
+                    intent.putExtra("titile","Welcome To C++ language");
+                    v.getContext().startActivity(intent);
+                }
+                if(title=="Java"){
+                    Intent intent=new Intent(v.getContext(),TestActivity.class);
+                    intent.putExtra("titile","Welcome To Java language");
+                    v.getContext().startActivity(intent);
+                }
+                if(title=="Julia"){
+                    Intent intent=new Intent(v.getContext(),TestActivity.class);
+                    intent.putExtra("titile","Welcome To Julia language");
+                    v.getContext().startActivity(intent);
+                }
+                if(title=="Dart"){
+                    Intent intent=new Intent(v.getContext(),TestActivity.class);
+                    intent.putExtra("titile","Welcome To Dart language");
+                    v.getContext().startActivity(intent);
+                }
+                if(title=="Go"){
+                    Intent intent=new Intent(v.getContext(),TestActivity.class);
+                    intent.putExtra("titile","Welcome To Go language");
+                    v.getContext().startActivity(intent);
+                }
+                if(title=="JavaScript"){
+                    Intent intent=new Intent(v.getContext(),TestActivity.class);
+                    intent.putExtra("titile","Welcome To JavaSrcipt language");
+                    v.getContext().startActivity(intent);
+                }
+
             }
         });
 
