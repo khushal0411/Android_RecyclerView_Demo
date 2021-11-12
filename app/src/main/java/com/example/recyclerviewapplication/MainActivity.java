@@ -36,14 +36,15 @@ public class MainActivity extends AppCompatActivity {
                 input();
             }
         };
-        handler.postDelayed(runnable,3000);
-      runnable.run();
+        handler.postDelayed(runnable,6000);
+
 
     }
 
     private void input() {
 
-           // try {
+                adapter.notifyDataSetChanged();
+
                 DataItems dataItems = new DataItems("Users", R.drawable.user);
                 DataItems dt1 = new DataItems("Java", R.drawable.java);
                 DataItems dt2 = new DataItems("C", R.drawable.c);
@@ -60,11 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 desclist.add(dt7);
                 desclist.add(dt8);
                 desclist.add(dataItems);
-            //}
-            //catch (RuntimeException e){
-                //Toast.makeText(this, "Error="+e.toString(), Toast.LENGTH_LONG).show();
 
-           // }
+
 
 
     }
